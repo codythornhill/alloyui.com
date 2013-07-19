@@ -3,7 +3,7 @@ layout: single-doc
 title: Overlay
 tags: 'overlay'
 category: Overlay
-description: Provides the user with a versitile method of overlaying html elements.
+description: Provides a flexible way of overlaying HTML elements.
 ---
 
 #### Getting Started
@@ -29,7 +29,7 @@ AUI().use(
 
 #### Using Overlay
 
-Create an HTML element for the overlay, as well as one for the overlay to appear in.
+Create an HTML element to house the overlay and another element to act as the overlay.
 
 ``` html
 <div id="outer">Mouse over here.
@@ -37,7 +37,7 @@ Create an HTML element for the overlay, as well as one for the overlay to appear
 </div>
 ```
 
-Also, you'll need to give the div elements styling for this to function correctly.
+Also, we'll need to give the div elements styling for this to function correctly.
 
 ``` css
 #outer {
@@ -58,7 +58,7 @@ Also, you'll need to give the div elements styling for this to function correctl
 }
 ```
 
-Now create an instance of the Overlay component. You'll need to initialize some of the attributes: the `contentBox` attribute specifies which element the overlay will be, `srcNode` tells the overlay in which element it should be located, and `visible` sets the initial visibility of the overlay.
+Now create an instance of the Overlay component. You'll need to initialize some of the attributes: the `contentBox` attribute specifies which element will act as the overlay, the `srcNode` designates which element the overlay covers, and `visible` sets the initial visibility of the overlay...
 
 ``` javascript
 AUI().use(
