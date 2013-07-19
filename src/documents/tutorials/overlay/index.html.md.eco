@@ -29,10 +29,17 @@ AUI().use(
 
 #### Using Overlay
 
-Create a div element for the overlay, as well as one for the overlay to appear in. Also, you'll need to give the div elements styling for this to function correctly.
+Create an HTML element for the overlay, as well as one for the overlay to appear in.
 
 ``` html
-<style type="text/css">
+<div id="outer">Mouse over here.
+  <div id="overlay">This is an overlay!</div>
+</div>
+```
+
+Also, you'll need to give the div elements styling for this to function correctly.
+
+``` css
 #outer {
   border: dotted red;
   font-size: 20px;
@@ -45,15 +52,10 @@ Create a div element for the overlay, as well as one for the overlay to appear i
 #overlay {
   background-color: #08C;
   height: 300px;
-  line-height:300px;
+  line-height: 300px;
   margin: 2px;
   width: 300px;
 }
-</style>
-
-<div id="outer">Mouse over here.
-  <div id="overlay">This is an overlay!</div>
-</div>
 ```
 
 Now create an instance of the Overlay component. You'll need to initialize some of the attributes: the `contentBox` attribute specifies which element the overlay will be, `srcNode` tells the overlay in which element it should be located, and `visible` sets the initial visibility of the overlay.
